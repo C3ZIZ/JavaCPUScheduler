@@ -21,11 +21,36 @@ public class Driver {
     public static Scanner scnr = new Scanner(System.in);
     public static void main(String[] args) {
         ProcessList pList = new ProcessList();
-        pList.addProcess(new Process(11, 2));
-        pList.addProcess(new Process(5, 1));
+        int ProcessNum;
+        Utilities.displayWithDelay("Welcome to CPU scheduler simulator", "white");
 
+        PSystem.ProcessManageMenu();
+        int choice; 
+        while (true) {
+            choice = scnr.nextInt();
 
-        Priority.calcPriority(pList);
+            switch (choice) {
+                case 1:
+                    Utilities.displayWithDelay("How many process do you want? ", "white");
+                    ProcessNum = scnr.nextInt();
+                    for(int i = 1 ; i <= ProcessNum ; i++){
+                    pList.addProcess(PSystem.ProcessManage());
+                    }
+                    PSystem.ProcessManageMenu();
+                    break;
+                case 2:
+                    pList.display();
+                    PSystem.ProcessManageMenu();
+                    break;
+                case 3:
+                    PSystem.AlgorithmMenu();
+                    int choose = scnr.nextInt();
+                    PSystem.chooseAlgorithm(choose,pList);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
 }
