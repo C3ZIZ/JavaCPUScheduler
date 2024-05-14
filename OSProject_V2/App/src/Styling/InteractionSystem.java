@@ -49,7 +49,7 @@ public class InteractionSystem {
                         break;
                     case 3:
                         Utilities.displayWithDelay("SJF will execute...\n", "white");
-                        SJF.calcSJF(pList);
+                        ShortestJobFirst.calcSJF(pList);
                         break;
                     case 4:
                         Utilities.displayWithDelay("SJF(non-preemptive) will execute...\n", "white");
