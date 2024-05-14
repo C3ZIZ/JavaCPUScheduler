@@ -147,6 +147,14 @@ public class ProcessList {
         Utilities.displayWithDelay(processList, "white");
     }
 
+    public void display(){
+        System.out.println("\tProcess\tBurstTime");
+        for(Process P : pList){
+            
+            System.out.println(("\t   " + P.getProcessName()) + "       " + P.getBurstTime());
+        }
+    }
+
     /**
      * Calculates the average waiting time and average turnaround time.
      *

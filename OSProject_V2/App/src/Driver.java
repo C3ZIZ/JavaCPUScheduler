@@ -1,10 +1,8 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import Process.ProcessList;
-import Process.Process;
-import Scheduling_Algorithms.*;
 import Styling.Utilities;
-
+import Styling.InteractionSystem;
 /**
  * Operating Systems - Project UQU 453
  * A project that aims to implement CPU scheduling algorithms:
@@ -24,28 +22,28 @@ public class Driver {
         int ProcessNum;
         Utilities.displayWithDelay("Welcome to CPU scheduler simulator", "white");
 
-        PSystem.ProcessManageMenu();
+        InteractionSystem.ProcessManageMenu();
         int choice; 
         while (true) {
             choice = scnr.nextInt();
 
             switch (choice) {
                 case 1:
-                    Utilities.displayWithDelay("How many process do you want? ", "white");
+                    Utilities.displayWithDelay("How many process do you want? ", "cyan");
                     ProcessNum = scnr.nextInt();
                     for(int i = 1 ; i <= ProcessNum ; i++){
-                    pList.addProcess(PSystem.ProcessManage());
+                    pList.addProcess(InteractionSystem.ProcessManage());
                     }
-                    PSystem.ProcessManageMenu();
+                    InteractionSystem.ProcessManageMenu();
                     break;
                 case 2:
                     pList.display();
-                    PSystem.ProcessManageMenu();
+                    InteractionSystem.ProcessManageMenu();
                     break;
                 case 3:
-                    PSystem.AlgorithmMenu();
+                    InteractionSystem.AlgorithmMenu();
                     int choose = scnr.nextInt();
-                    PSystem.chooseAlgorithm(choose,pList);
+                    InteractionSystem.chooseAlgorithm(choose,pList);
                     break;
                 default:
                     break;
