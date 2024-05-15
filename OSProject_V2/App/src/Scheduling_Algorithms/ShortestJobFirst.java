@@ -18,6 +18,6 @@ public class ShortestJobFirst extends FCFS {
         ProcessList toUseList = new ProcessList(pList.size());
         toUseList.addAll(pList);
         toUseList.sortByBurstTime();
-        FCFS.calcFCFS(toUseList);
+        FCFS.calcFCFS(toUseList,false);
     }
 }

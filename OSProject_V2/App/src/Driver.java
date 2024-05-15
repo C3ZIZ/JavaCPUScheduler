@@ -40,7 +40,7 @@ public class Driver {
                     InteractionSystem.ProcessManageMenu();
                     break;
                 case 2:
-                    pList.display();
+                    pList.printList("show-content");
                     InteractionSystem.ProcessManageMenu();
                     break;
                 case 3:

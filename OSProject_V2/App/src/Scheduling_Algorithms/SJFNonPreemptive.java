@@ -30,7 +30,7 @@ public class SJFNonPreemptive {
             process.setTurnAround(currentTime - process.getArrivalTime());
             totalTurnAround += process.getTurnAround();
         }
-        toUseList.printList();
+        toUseList.printList("sjf-non-preemptive");
         toUseList.calcAvgTimes(totalWaitingTime, totalTurnAround, numOfProcess);
     }
 }

@@ -62,7 +62,7 @@ public class RoundRobin {
 
         // Print the process list and calculate average times
         System.out.println();
-        toUseList.printList();
+        toUseList.printList("rr");
         toUseList.calcAvgTimes(totalWaitingTime, totalTurnAroundTime, numOfProcess);
         Utilities.displayWithDelay("Total number of switches: "+numOfSwitches(pList, quantum), "magenta");
     }

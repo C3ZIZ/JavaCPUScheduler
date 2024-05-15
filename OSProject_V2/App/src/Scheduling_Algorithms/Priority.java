@@ -18,6 +18,6 @@ public class Priority extends FCFS {
         ProcessList toUseList = new ProcessList(pList.size());
         toUseList.addAll(pList);
         toUseList.sortByPriority();
-        FCFS.calcFCFS(toUseList);
+        FCFS.calcFCFS(toUseList, true);
     }
 }

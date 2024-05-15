@@ -10,11 +10,12 @@ import Process.Process;
 public class FCFS {
 
     /**
-     * Calculates the waiting time, turnaround time, and average times for the processes using the FCFS algorithm.
+     * Calculates the waiting time, turnaround time, and average times for the
+     * processes using the FCFS algorithm.
      *
      * @param pList The list of processes to be scheduled.
      */
-    public static void calcFCFS(ProcessList pList) {
+    public static void calcFCFS(ProcessList pList, boolean withPriority) {
         ProcessList toUseList = new ProcessList(pList.size());
         toUseList.addAll(pList);
         int currentTime = 0;
@@ -30,7 +31,11 @@ public class FCFS {
             process.setTurnAround(currentTime);
             totalTurnAround += process.getTurnAround();
         }
-        toUseList.printList();
+        if (withPriority) {
+            toUseList.printList("priority");
+        } else {
+            toUseList.printList("fcfs");
+        }
         toUseList.calcAvgTimes(totalWaitingTime, totalTurnAround, numOfProcess);
     }
 }

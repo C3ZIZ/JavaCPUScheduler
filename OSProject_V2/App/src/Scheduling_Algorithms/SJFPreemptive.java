@@ -74,7 +74,7 @@ public class SJFPreemptive {
             }
         }
         // Print the process list and average times
-        toUseList.printList();
+        toUseList.printList("sjf-preemptive");
         toUseList.calcAvgTimes((int) totalWaitingTime, (int) totalTurnaroundTime, processes);
     }
 }

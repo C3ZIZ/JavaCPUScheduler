@@ -45,7 +45,7 @@ public class InteractionSystem {
                         break;
                     case 2:
                         Utilities.displayWithDelay("FCFS will execute...\n", "white");
-                        FCFS.calcFCFS(pList);
+                        FCFS.calcFCFS(pList,false);
                         break;
                     case 3:
                         Utilities.displayWithDelay("SJF will execute...\n", "white");

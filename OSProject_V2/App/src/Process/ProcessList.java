@@ -73,7 +73,8 @@ public class ProcessList {
      */
     public void sortByBurstTime() {
         /*
-         * Using collection sort (source, operation (here we use comparator taking the type 
+         * Using collection sort (source, operation (here we use comparator taking the
+         * type
          * of class and traverse each process's burt time) )
          */
         Collections.sort(pList, Comparator.comparingInt(Process::getBurstTime));
@@ -107,10 +108,12 @@ public class ProcessList {
     }
 
     /**
-     * Retrieves the process with the shortest remaining time at a given arrival time.
+     * Retrieves the process with the shortest remaining time at a given arrival
+     * time.
      *
      * @param arrivalTime The arrival time to consider.
-     * @return The process with the shortest remaining time at the given arrival time.
+     * @return The process with the shortest remaining time at the given arrival
+     *         time.
      */
     public Process getShortestRemainingTimeProcess(int arrivalTime) {
         Process shortest = null;
@@ -132,18 +135,55 @@ public class ProcessList {
     /**
      * Prints the process list with the process details.
      */
-    public void printList() {
+    public void printList(String algorithmType) {
         sortByArrivalTime();
         String processList = "";
-        processList += "ProcessName\tArrivalTime\tPriority\tWaitingTime\tTurnAroundTime\n";
-        for (int i = 0; i < pList.size(); i++) {
-            processList += pList.get(i).getProcessName() + "\t\t";
-            processList += pList.get(i).getArrivalTime() + "\t\t";
-            processList += pList.get(i).getPriority() + "\t\t";
-            processList += pList.get(i).getWaitingTime() + "\t\t";
-            processList += pList.get(i).getTurnAround() + "\t\t";
-            processList += "\n";
+        algorithmType = algorithmType.toLowerCase();
+        if (algorithmType.equals("fcfs") || algorithmType.equals("sjf") || algorithmType.equals("rr")) {
+            processList += "ProcessName\tBurstTime\tWaitingTime\tTurnAroundTime\n";
+            for (int i = 0; i < pList.size(); i++) {
+                processList += pList.get(i).getProcessName() + "\t\t";
+                processList += pList.get(i).getBurstTime() + "\t\t";
+                processList += pList.get(i).getWaitingTime() + "\t\t";
+                processList += pList.get(i).getTurnAround() + "\t\t";
+                processList += "\n";
+            }
+
         }
+        else if (algorithmType.equals("sjf-non-preemptive") || algorithmType.equals("sjf-preemptive")) {
+            processList += "ProcessName\tBurstTime\tArrivalTime\tWaitingTime\tTurnAroundTime\n";
+            for (int i = 0; i < pList.size(); i++) {
+                processList += pList.get(i).getProcessName() + "\t\t";
+                processList += pList.get(i).getBurstTime() + "\t\t";
+                processList += pList.get(i).getArrivalTime() + "\t\t";
+                processList += pList.get(i).getWaitingTime() + "\t\t";
+                processList += pList.get(i).getTurnAround() + "\t\t";
+                processList += "\n";
+            }
+        }
+        else if (algorithmType.equals("priority")) {
+            processList += "ProcessName\tBurstTime\tPriority\tWaitingTime\tTurnAroundTime\n";
+            for (int i = 0; i < pList.size(); i++) {
+                processList += pList.get(i).getProcessName() + "\t\t";
+                processList += pList.get(i).getBurstTime() + "\t\t";
+                processList += pList.get(i).getPriority() + "\t\t";
+                processList += pList.get(i).getWaitingTime() + "\t\t";
+                processList += pList.get(i).getTurnAround() + "\t\t";
+                processList += "\n";
+            }
+        }
+        else if (algorithmType.equals("show-content")) {
+            processList += "ProcessName\tBurstTime\n";
+            for (int i = 0; i < pList.size(); i++) {
+                processList += pList.get(i).getProcessName() + "\t\t";
+                processList += pList.get(i).getBurstTime() + "\t\t";
+                processList += "\n";
+            }
+        }
+        else {
+            Utilities.displayWithDelay("No such algorithm!", "red");
+        }
+
         Utilities.displayWithDelay(processList, "white");
     }
 
