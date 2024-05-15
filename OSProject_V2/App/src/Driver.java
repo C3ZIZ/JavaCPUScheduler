@@ -28,7 +28,8 @@ public class Driver {
         InteractionSystem.ProcessManageMenu();
         int choice; 
         while (true) {
-            choice = scnr.nextInt();
+            try {
+                choice = scnr.nextInt();
 
             switch (choice) {
                 case 1:
@@ -50,6 +51,10 @@ public class Driver {
                     break;
                 default:
                     break;
+            }
+            } catch (InputMismatchException e) {
+                Utilities.displayWithDelay("Input Must Be A Number!", "red");
+                scnr.next();
             }
         }
     }
