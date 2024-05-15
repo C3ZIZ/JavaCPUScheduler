@@ -34,52 +34,73 @@ public class InteractionSystem {
 
     }
 
-    public static void chooseAlgorithm(int choise, ProcessList pList){
-        while (true) {
-
-            try {
-
-                switch (choise) {
-                    case 1:
-                        AlgorithmMenu();
-                        break;
-                    case 2:
-                        Utilities.displayWithDelay("FCFS will execute...\n", "white");
-                        FCFS.calcFCFS(pList,false);
-                        break;
-                    case 3:
-                        Utilities.displayWithDelay("SJF will execute...\n", "white");
+    public static void chooseAlgorithm(int choice, ProcessList pList) {
+        try {
+            switch (choice) {
+                case 1:
+                    AlgorithmMenu();
+                    break;
+                case 2:
+                    Utilities.displayWithDelay("FCFS will execute...\n", "white");
+                    if (pList.isEmpty()) {
+                        Utilities.displayWithDelay("Error: Process list is empty!", "red");
+                    } else {
+                        FCFS.calcFCFS(pList, false);
+                    }
+                    break;
+                case 3:
+                    Utilities.displayWithDelay("SJF will execute...\n", "white");
+                    if (pList.isEmpty()) {
+                        Utilities.displayWithDelay("Error: Process list is empty!", "red");
+                    } else {
                         ShortestJobFirst.calcSJF(pList);
-                        break;
-                    case 4:
-                        Utilities.displayWithDelay("SJF(non-preemptive) will execute...\n", "white");
+                    }
+                    break;
+                case 4:
+                    Utilities.displayWithDelay("SJF (non-preemptive) will execute...\n", "white");
+                    if (pList.isEmpty()) {
+                        Utilities.displayWithDelay("Error: Process list is empty!", "red");
+                    } else {
                         SJFNonPreemptive.calcSJFNonPreemptive(pList);
-                        break;
-                    case 5:
-                        Utilities.displayWithDelay("SJF(preemptive) will execute...\n", "white");
+                    }
+                    break;
+                case 5:
+                    Utilities.displayWithDelay("SJF (preemptive) will execute...\n", "white");
+                    if (pList.isEmpty()) {
+                        Utilities.displayWithDelay("Error: Process list is empty!", "red");
+                    } else {
                         SJFPreemptive.calcSRTF(pList);
-                        break;
-                    case 6:
-                        Utilities.displayWithDelay("Priority will execute...\n", "white");
+                    }
+                    break;
+                case 6:
+                    Utilities.displayWithDelay("Priority will execute...\n", "white");
+                    if (pList.isEmpty()) {
+                        Utilities.displayWithDelay("Error: Process list is empty!", "red");
+                    } else {
                         Priority.calcPriority(pList);
-                        break;
-                    case 7:
-                        Utilities.displayWithDelay("Round Robin will execute...\n", "white");
-                        Utilities.displayWithDelay("Enter your quantum value\n", "white");
+                    }
+                    break;
+                case 7:
+                    Utilities.displayWithDelay("Round Robin will execute...\n", "white");
+                    if (pList.isEmpty()) {
+                        Utilities.displayWithDelay("Error: Process list is empty!", "red");
+                    } else {
+                        Utilities.displayWithDelay("Enter your quantum value: ", "white");
                         int quantum = scnr.nextInt();
                         RoundRobin.calcRR(pList, quantum);
-                        break;
-                    case 8:
-                           System.exit(0);
-                        break;
-                    default:
-                        break;
-                }
-
-            } catch (InputMismatchException e) {
-                Utilities.displayWithDelay("Choise must be a number!", "red");
-                scnr.next();
+                    }
+                    break;
+                case 8:
+                    Utilities.displayWithDelay("Exiting the program...", "white");
+                    System.exit(0);
+                    break;
+                default:
+                    Utilities.displayWithDelay("Invalid choice!", "red");
+                    break;
             }
-}
+        } catch (InputMismatchException e) {
+            Utilities.displayWithDelay("Choice must be a number!", "red");
+            scnr.next();
+        }
     }
 }

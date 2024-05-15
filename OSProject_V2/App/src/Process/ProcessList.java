@@ -107,6 +107,10 @@ public class ProcessList {
         }
     }
 
+    public boolean isEmpty(){
+        return pList.isEmpty();
+    }
+
     /**
      * Retrieves the process with the shortest remaining time at a given arrival
      * time.
