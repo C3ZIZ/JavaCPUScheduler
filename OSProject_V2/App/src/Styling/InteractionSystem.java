@@ -11,7 +11,7 @@ public class InteractionSystem {
 
     public static void AlgorithmMenu() {
         Utilities.displayWithDelay("Choose your algorithm:", "white");
-        Utilities.displayWithDelay("1: Show menu\n", "white");
+        Utilities.displayWithDelay("1: Show menu", "white");
         Utilities.displayWithDelay("2: First Come First Served (FCFS)\n3: Shortest Job First (SJF)", "white");
         Utilities.displayWithDelay("4: SJF (non-preemptive)\n5: SJF (preemptive)", "white");
         Utilities.displayWithDelay("6: Priority\n7: Round Robin (RR)\n8: Exit", "white");
@@ -19,15 +19,17 @@ public class InteractionSystem {
     }
     public static void ProcessManageMenu(){
         Utilities.displayWithDelay("Create your Processes:", "white");
-        Utilities.displayWithDelay("1: Add process\n", "white");
-        Utilities.displayWithDelay("2: Display Processes\n", "white");
-        Utilities.displayWithDelay("3: Choose Algorithm\n", "white");
+        Utilities.displayWithDelay("1: Add process", "white");
+        Utilities.displayWithDelay("2: Display Processes", "white");
+        Utilities.displayWithDelay("3: Choose Algorithm", "white");
+        Utilities.displayWithDelayNoLine("Your input >> ", "green");
     }
     public static Process ProcessManage(){
-        Utilities.displayWithDelay("Enter Process BurstTime: \n", "white");
+        Utilities.displayWithDelayNoLine("Enter Process's BurstTime >> ", "white");
             int burstTime = scnr.nextInt();
-        Utilities.displayWithDelay("Enter Process Priority (enter 0 if there isn't): \n", "white");
+        Utilities.displayWithDelayNoLine("Enter Process's Priority (Enter 0 for no priority) >> ", "white");
             int priority = scnr.nextInt();
+            Utilities.displayWithDelay("-----------------------------------------------", "white");
             return (new Process(burstTime,priority));
 
     }
@@ -36,8 +38,6 @@ public class InteractionSystem {
         while (true) {
 
             try {
-
-                choise = scnr.nextInt();
 
                 switch (choise) {
                     case 1:

@@ -23,7 +23,7 @@ public class Driver {
     public static void main(String[] args) {
         ProcessList pList = new ProcessList();
         int ProcessNum;
-        Utilities.displayWithDelay("Welcome to CPU scheduler simulator", "white");
+        Utilities.displayWithDelay("Welcome to CPU scheduler simulator\n", "white");
 
         InteractionSystem.ProcessManageMenu();
         int choice; 
@@ -32,7 +32,7 @@ public class Driver {
 
             switch (choice) {
                 case 1:
-                    Utilities.displayWithDelay("How many process do you want? ", "white");
+                    Utilities.displayWithDelayNoLine("Enter the number of Process you want >> ", "green");
                     ProcessNum = scnr.nextInt();
                     for(int i = 1 ; i <= ProcessNum ; i++){
                     pList.addProcess(InteractionSystem.ProcessManage());
