@@ -25,8 +25,8 @@ public class InteractionSystem {
                     case 1:
                         Utilities.displayWithDelayNoLine("Enter the number of processes you want: ", "green");
                         processNum = scnr.nextInt();
-                        if (processNum < 0) {
-                            Utilities.displayWithDelay("Number of processes cannot be negative!", "red");
+                        if (processNum <= 0) {
+                            Utilities.displayWithDelay("Number of processes must be positive!", "red");
                             break;
                         }
                         Utilities.displayWithDelayNoLine("Do you want to use priority? (Y/N) >> ", "green");
@@ -99,14 +99,14 @@ public class InteractionSystem {
                 try {
                     Utilities.displayWithDelayNoLine("Enter Process's BurstTime >> ", "white");
                     int burstTime = scnr.nextInt();
-                    if (burstTime < 0) {
-                        throw new IllegalArgumentException("Burst time cannot be negative!");
+                    if (burstTime <= 0) {
+                        throw new IllegalArgumentException("Burst time must be positive!");
                     }
 
-                    Utilities.displayWithDelayNoLine("Enter Process's Priority (Enter 0 for no priority) >> ", "white");
+                    Utilities.displayWithDelayNoLine("Enter Process's Priority >> ", "white");
                     int priority = scnr.nextInt();
-                    if (priority < 0) {
-                        throw new IllegalArgumentException("Priority cannot be negative!");
+                    if (priority <= 0) {
+                        throw new IllegalArgumentException("Priority must be positive!");
                     }
 
                     Utilities.displayWithDelay("-----------------------------------------------", "white");
@@ -124,8 +124,8 @@ public class InteractionSystem {
                 try {
                     Utilities.displayWithDelayNoLine("Enter Process's BurstTime >> ", "white");
                     int burstTime = scnr.nextInt();
-                    if (burstTime < 0) {
-                        throw new IllegalArgumentException("Burst time cannot be negative!");
+                    if (burstTime <= 0) {
+                        throw new IllegalArgumentException("Burst time must be positive!");
                     }
                     Utilities.displayWithDelay("-----------------------------------------------", "white");
                     process = new Process(burstTime);
