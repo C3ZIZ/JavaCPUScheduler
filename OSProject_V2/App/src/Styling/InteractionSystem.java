@@ -1,4 +1,5 @@
 package Styling;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import Process.ProcessList;
@@ -17,21 +18,22 @@ public class InteractionSystem {
         Utilities.displayWithDelay("6: Priority\n7: Round Robin (RR)\n8: Exit", "white");
         Utilities.displayWithDelayNoLine("Your input >> ", "green");
     }
-    public static void ProcessManageMenu(){
+
+    public static void ProcessManageMenu() {
         Utilities.displayWithDelay("Create your Processes:", "white");
         Utilities.displayWithDelay("1: Add process", "white");
         Utilities.displayWithDelay("2: Display Processes", "white");
         Utilities.displayWithDelay("3: Choose Algorithm", "white");
         Utilities.displayWithDelayNoLine("Your input >> ", "green");
     }
-    public static Process ProcessManage(){
-        Utilities.displayWithDelayNoLine("Enter Process's BurstTime >> ", "white");
-            int burstTime = scnr.nextInt();
-        Utilities.displayWithDelayNoLine("Enter Process's Priority (Enter 0 for no priority) >> ", "white");
-            int priority = scnr.nextInt();
-            Utilities.displayWithDelay("-----------------------------------------------", "white");
-            return (new Process(burstTime,priority));
 
+    public static Process ProcessManage() {
+        Utilities.displayWithDelayNoLine("Enter Process's BurstTime >> ", "white");
+        int burstTime = scnr.nextInt();
+        Utilities.displayWithDelayNoLine("Enter Process's Priority (Enter 0 for no priority) >> ", "white");
+        int priority = scnr.nextInt();
+        Utilities.displayWithDelay("-----------------------------------------------", "white");
+        return new Process(burstTime, priority);
     }
 
     public static void chooseAlgorithm(int choice, ProcessList pList) {
