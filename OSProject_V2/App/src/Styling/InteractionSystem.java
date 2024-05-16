@@ -25,14 +25,24 @@ public class InteractionSystem {
                     case 1:
                         Utilities.displayWithDelayNoLine("Enter the number of processes you want: ", "green");
                         processNum = scnr.nextInt();
-                        Utilities.displayWithDelayNoLine("Do you want to use priority? (Y/N) >> ", "green");
-                        
                         if (processNum < 0) {
                             Utilities.displayWithDelay("Number of processes cannot be negative!", "red");
                             break;
                         }
-                        for (int i = 1; i <= processNum; i++) {
-                            pList.addProcess(InteractionSystem.ProcessManage());
+                        Utilities.displayWithDelayNoLine("Do you want to use priority? (Y/N) >> ", "green");
+                        usePriority = scnr.next().charAt(0);
+                        usePriority = Character.toLowerCase(usePriority);
+                        if (usePriority != 'y' && usePriority != 'n') {
+                            Utilities.displayWithDelay("Invalid choice!", "red");
+                            break;
+                        } else if (usePriority == 'y') {
+                            for (int i = 1; i <= processNum; i++) {
+                                pList.addProcess(InteractionSystem.ProcessManage(true));
+                            }
+                        } else {
+                            for (int i = 1; i <= processNum; i++) {
+                                pList.addProcess(InteractionSystem.ProcessManage(false));
+                            }
                         }
                         break;
                     case 2:
@@ -80,12 +90,55 @@ public class InteractionSystem {
         Utilities.displayWithDelayNoLine("Your input >> ", "green");
     }
 
-    public static Process ProcessManage() {
+    public static Process ProcessManage(boolean usePriority) {
         boolean isValidInput = false;
-
         Process process = null;
-        
-    
+
+        if (usePriority) {
+            while (!isValidInput) {
+                try {
+                    Utilities.displayWithDelayNoLine("Enter Process's BurstTime >> ", "white");
+                    int burstTime = scnr.nextInt();
+                    if (burstTime < 0) {
+                        throw new IllegalArgumentException("Burst time cannot be negative!");
+                    }
+
+                    Utilities.displayWithDelayNoLine("Enter Process's Priority (Enter 0 for no priority) >> ", "white");
+                    int priority = scnr.nextInt();
+                    if (priority < 0) {
+                        throw new IllegalArgumentException("Priority cannot be negative!");
+                    }
+
+                    Utilities.displayWithDelay("-----------------------------------------------", "white");
+                    process = new Process(burstTime, priority);
+                    isValidInput = true;
+                } catch (InputMismatchException e) {
+                    Utilities.displayWithDelay("Input must be a number!", "red");
+                    scnr.next(); // Clear the incorrect input
+                } catch (IllegalArgumentException e) {
+                    Utilities.displayWithDelay(e.getMessage(), "red");
+                }
+            }
+        } else {
+            while (!isValidInput) {
+                try {
+                    Utilities.displayWithDelayNoLine("Enter Process's BurstTime >> ", "white");
+                    int burstTime = scnr.nextInt();
+                    if (burstTime < 0) {
+                        throw new IllegalArgumentException("Burst time cannot be negative!");
+                    }
+                    Utilities.displayWithDelay("-----------------------------------------------", "white");
+                    process = new Process(burstTime);
+                    isValidInput = true;
+                } catch (InputMismatchException e) {
+                    Utilities.displayWithDelay("Input must be a number!", "red");
+                    scnr.next(); // Clear the incorrect input
+                } catch (IllegalArgumentException e) {
+                    Utilities.displayWithDelay(e.getMessage(), "red");
+                }
+            }
+        }
+
         while (!isValidInput) {
             try {
                 Utilities.displayWithDelayNoLine("Enter Process's BurstTime >> ", "white");
@@ -93,13 +146,13 @@ public class InteractionSystem {
                 if (burstTime < 0) {
                     throw new IllegalArgumentException("Burst time cannot be negative!");
                 }
-    
+
                 Utilities.displayWithDelayNoLine("Enter Process's Priority (Enter 0 for no priority) >> ", "white");
                 int priority = scnr.nextInt();
                 if (priority < 0) {
                     throw new IllegalArgumentException("Priority cannot be negative!");
                 }
-    
+
                 Utilities.displayWithDelay("-----------------------------------------------", "white");
                 process = new Process(burstTime, priority);
                 isValidInput = true;
@@ -110,7 +163,7 @@ public class InteractionSystem {
                 Utilities.displayWithDelay(e.getMessage(), "red");
             }
         }
-    
+
         return process;
     }
 
