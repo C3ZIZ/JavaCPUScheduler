@@ -15,7 +15,7 @@ This project aims to simulate the ready queue in CPU scheduler. It implements va
 
 To run the project, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your/repository.git`
+1. Clone the repository: `git clone https://github.com/C3ZIZ/HurryUpAndHelp.git`
 4. Run the simulation by executing the Driver.java.
 
 ## Project Members
