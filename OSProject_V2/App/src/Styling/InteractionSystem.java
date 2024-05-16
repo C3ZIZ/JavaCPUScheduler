@@ -10,6 +10,58 @@ import Styling.Utilities;
 public class InteractionSystem {
     public static Scanner scnr = new Scanner(System.in);
 
+    public static void initialize() {
+        ProcessList pList = new ProcessList();
+        int processNum;
+        Utilities.displayWithDelay("Welcome to CPU scheduler simulator\n", "white");
+        int choice;
+        char usePriority;
+        while (true) {
+            try {
+                InteractionSystem.ProcessManageMenu();
+                choice = scnr.nextInt();
+
+                switch (choice) {
+                    case 1:
+                        Utilities.displayWithDelayNoLine("Enter the number of processes you want: ", "green");
+                        processNum = scnr.nextInt();
+                        Utilities.displayWithDelayNoLine("Do you want to use priority? (Y/N) >> ", "green");
+                        
+                        if (processNum < 0) {
+                            Utilities.displayWithDelay("Number of processes cannot be negative!", "red");
+                            break;
+                        }
+                        for (int i = 1; i <= processNum; i++) {
+                            pList.addProcess(InteractionSystem.ProcessManage());
+                        }
+                        break;
+                    case 2:
+                        if (pList.isEmpty()) {
+                            Utilities.displayWithDelay("Process list is empty!", "red");
+                        } else {
+                            pList.printList("show-content");
+                        }
+                        break;
+                    case 3:
+                        InteractionSystem.AlgorithmMenu();
+                        int choose = scnr.nextInt();
+                        InteractionSystem.chooseAlgorithm(choose, pList);
+                        break;
+                    case 4:
+                        Utilities.displayWithDelay("Exiting the program...", "white");
+                        System.exit(0);
+                        break;
+                    default:
+                        Utilities.displayWithDelay("Invalid choise!", "red");
+                        break;
+                }
+            } catch (InputMismatchException e) {
+                Utilities.displayWithDelay("Input must be a number!\n", "red");
+                scnr.next();
+            }
+        }
+    }
+
     public static void AlgorithmMenu() {
         Utilities.displayWithDelay("Choose your algorithm:", "white");
         Utilities.displayWithDelay("1: Show menu", "white");
@@ -20,20 +72,46 @@ public class InteractionSystem {
     }
 
     public static void ProcessManageMenu() {
-        Utilities.displayWithDelay("Create your Processes:", "white");
+        Utilities.displayWithDelay("What operation you want:", "white");
         Utilities.displayWithDelay("1: Add process", "white");
         Utilities.displayWithDelay("2: Display Processes", "white");
         Utilities.displayWithDelay("3: Choose Algorithm", "white");
+        Utilities.displayWithDelay("4: Exit", "white");
         Utilities.displayWithDelayNoLine("Your input >> ", "green");
     }
 
     public static Process ProcessManage() {
-        Utilities.displayWithDelayNoLine("Enter Process's BurstTime >> ", "white");
-        int burstTime = scnr.nextInt();
-        Utilities.displayWithDelayNoLine("Enter Process's Priority (Enter 0 for no priority) >> ", "white");
-        int priority = scnr.nextInt();
-        Utilities.displayWithDelay("-----------------------------------------------", "white");
-        return new Process(burstTime, priority);
+        boolean isValidInput = false;
+
+        Process process = null;
+        
+    
+        while (!isValidInput) {
+            try {
+                Utilities.displayWithDelayNoLine("Enter Process's BurstTime >> ", "white");
+                int burstTime = scnr.nextInt();
+                if (burstTime < 0) {
+                    throw new IllegalArgumentException("Burst time cannot be negative!");
+                }
+    
+                Utilities.displayWithDelayNoLine("Enter Process's Priority (Enter 0 for no priority) >> ", "white");
+                int priority = scnr.nextInt();
+                if (priority < 0) {
+                    throw new IllegalArgumentException("Priority cannot be negative!");
+                }
+    
+                Utilities.displayWithDelay("-----------------------------------------------", "white");
+                process = new Process(burstTime, priority);
+                isValidInput = true;
+            } catch (InputMismatchException e) {
+                Utilities.displayWithDelay("Input must be a number!", "red");
+                scnr.next(); // Clear the incorrect input
+            } catch (IllegalArgumentException e) {
+                Utilities.displayWithDelay(e.getMessage(), "red");
+            }
+        }
+    
+        return process;
     }
 
     public static void chooseAlgorithm(int choice, ProcessList pList) {

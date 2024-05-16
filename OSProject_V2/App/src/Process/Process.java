@@ -22,7 +22,26 @@ public class Process {
 
 
     /**
-     * Constructs a process with the given name, burst time, and priority.
+     * Constructs a process with burst time, and priority.
+     *
+     * @param burstTime   The burst time required for the process.
+     */
+    public Process(int burstTime) {
+        this.processName = "P" + processID;
+        this.burstTime = burstTime;
+        this.priority = 0;
+        arrivalTime = 0;
+        waitingTime = 0;
+        turnAround = 0;
+        remainTime = burstTime;
+        minTurnAround = 0;
+        maxWaiting = 0;
+        cut = false;
+        processID++;
+    }
+
+    /**
+     * Constructs a process with burst time, and priority.
      *
      * @param burstTime   The burst time required for the process.
      * @param priority    The priority of the process.
