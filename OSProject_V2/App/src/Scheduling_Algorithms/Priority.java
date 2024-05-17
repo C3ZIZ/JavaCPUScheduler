@@ -1,7 +1,5 @@
 package Scheduling_Algorithms;
-
 import Process.ProcessList;
-import Styling.Utilities;
 
 /**
  * Represents the Priority scheduling algorithm.

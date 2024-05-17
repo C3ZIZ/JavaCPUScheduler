@@ -1,11 +1,9 @@
 package Styling;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import Process.ProcessList;
 import Process.Process;
 import Scheduling_Algorithms.*;
-import Styling.Utilities;
 
 public class InteractionSystem {
     public static Scanner scnr = new Scanner(System.in);
