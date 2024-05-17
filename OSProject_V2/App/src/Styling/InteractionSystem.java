@@ -182,7 +182,7 @@ public class InteractionSystem {
     public static void chooseAlgorithm(int choice, ProcessList pList) {
         try {
             switch (choice) {
-            
+
                 case 1:
                     Utilities.displayWithDelay("FCFS will execute...\n", "white");
                     if (pList.isEmpty()) {
