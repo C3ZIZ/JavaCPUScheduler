@@ -105,8 +105,8 @@ public class InteractionSystem {
 
                     Utilities.displayWithDelayNoLine("Enter Process's ArrivalTime >> ", "white");
                     int arrivalTime = scnr.nextInt();
-                    if (arrivalTime <= 0) {
-                        throw new IllegalArgumentException("Arrival time must be positive!");
+                    if (arrivalTime < 0) {
+                        throw new IllegalArgumentException("Arrival time cannot be negative!");
                     }
 
                     Utilities.displayWithDelayNoLine("Enter Process's Priority >> ", "white");
@@ -130,14 +130,14 @@ public class InteractionSystem {
                 try {
                     Utilities.displayWithDelayNoLine("Enter Process's BurstTime >> ", "white");
                     int burstTime = scnr.nextInt();
-                    if (burstTime <= 0) {
+                    if (burstTime < 0) {
                         throw new IllegalArgumentException("Burst time must be positive!");
                     }
 
                     Utilities.displayWithDelayNoLine("Enter Process's ArrivalTime >> ", "white");
                     int arrivalTime = scnr.nextInt();
-                    if (arrivalTime <= 0) {
-                        throw new IllegalArgumentException("Arrival time must be positive!");
+                    if (arrivalTime < 0) {
+                        throw new IllegalArgumentException("Arrival time cannot be negative!");
                     }
 
                     Utilities.displayWithDelay("-----------------------------------------------", "white");
