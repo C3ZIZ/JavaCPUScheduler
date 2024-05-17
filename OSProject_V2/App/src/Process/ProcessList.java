@@ -39,9 +39,9 @@ public class ProcessList {
         pList.add(p);
     }
 
-
     /**
      * Removes a process from the list
+     * 
      * @param process to remoev
      */
     public void removeProcess(Process process) {
@@ -105,6 +105,14 @@ public class ProcessList {
     }
 
     /**
+     * Sorts the process list by the number obtained from the process name in
+     * ascending order.
+     */
+    public void sortByNumber() {
+        Collections.sort(pList, Comparator.comparingInt(p -> Integer.parseInt(p.getProcessName().substring(1))));
+    }
+
+    /**
      * Adds all processes from another process list to this process list.
      *
      * @param otherList The process list to be added.
@@ -148,6 +156,7 @@ public class ProcessList {
      * Prints the process list with the process details.
      */
     public void printList(String algorithmType) {
+        sortByNumber();
         String processList = "";
         algorithmType = algorithmType.toLowerCase();
         if (algorithmType.equals("fcfs") || algorithmType.equals("sjf") || algorithmType.equals("rr")) {
