@@ -74,10 +74,9 @@ public class InteractionSystem {
 
     public static void AlgorithmMenu() {
         Utilities.displayWithDelay("Choose your algorithm:", "white");
-        Utilities.displayWithDelay("1: Show menu", "white");
-        Utilities.displayWithDelay("2: First Come First Served (FCFS)\n3: Shortest Job First (SJF)", "white");
-        Utilities.displayWithDelay("4: SJF (non-preemptive)\n5: SJF (preemptive)", "white");
-        Utilities.displayWithDelay("6: Priority\n7: Round Robin (RR)\n8: Exit", "white");
+        Utilities.displayWithDelay("1: First Come First Served (FCFS)\n2: Shortest Job First (SJF)", "white");
+        Utilities.displayWithDelay("3: SJF (non-preemptive)\n4: SJF (preemptive)", "white");
+        Utilities.displayWithDelay("5: Priority\n6: Round Robin (RR)\n7: Exit", "white");
         Utilities.displayWithDelayNoLine("Your input >> ", "green");
     }
 
@@ -183,10 +182,8 @@ public class InteractionSystem {
     public static void chooseAlgorithm(int choice, ProcessList pList) {
         try {
             switch (choice) {
+            
                 case 1:
-                    AlgorithmMenu();
-                    break;
-                case 2:
                     Utilities.displayWithDelay("FCFS will execute...\n", "white");
                     if (pList.isEmpty()) {
                         Utilities.displayWithDelay("Error: Process list is empty!", "red");
@@ -194,7 +191,7 @@ public class InteractionSystem {
                         FCFS.calcFCFS(pList, false);
                     }
                     break;
-                case 3:
+                case 2:
                     Utilities.displayWithDelay("SJF will execute...\n", "white");
                     if (pList.isEmpty()) {
                         Utilities.displayWithDelay("Error: Process list is empty!", "red");
@@ -202,7 +199,7 @@ public class InteractionSystem {
                         ShortestJobFirst.calcSJF(pList);
                     }
                     break;
-                case 4:
+                case 3:
                     Utilities.displayWithDelay("SJF (non-preemptive) will execute...\n", "white");
                     if (pList.isEmpty()) {
                         Utilities.displayWithDelay("Error: Process list is empty!", "red");
@@ -210,7 +207,7 @@ public class InteractionSystem {
                         SJFNonPreemptive.calcSJFNonPreemptive(pList);
                     }
                     break;
-                case 5:
+                case 4:
                     Utilities.displayWithDelay("SJF (preemptive) will execute...\n", "white");
                     if (pList.isEmpty()) {
                         Utilities.displayWithDelay("Error: Process list is empty!", "red");
@@ -218,7 +215,7 @@ public class InteractionSystem {
                         SJFPreemptive.calcSRTF(pList);
                     }
                     break;
-                case 6:
+                case 5:
                     Utilities.displayWithDelay("Priority will execute...\n", "white");
                     if (pList.isEmpty()) {
                         Utilities.displayWithDelay("Error: Process list is empty!", "red");
@@ -226,7 +223,7 @@ public class InteractionSystem {
                         Priority.calcPriority(pList);
                     }
                     break;
-                case 7:
+                case 6:
                     Utilities.displayWithDelay("Round Robin will execute...\n", "white");
                     if (pList.isEmpty()) {
                         Utilities.displayWithDelay("Error: Process list is empty!", "red");
@@ -236,7 +233,7 @@ public class InteractionSystem {
                         RoundRobin.calcRR(pList, quantum);
                     }
                     break;
-                case 8:
+                case 7:
                     Utilities.displayWithDelay("Exiting the program...", "white");
                     System.exit(0);
                     break;
