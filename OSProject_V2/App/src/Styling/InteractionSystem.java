@@ -92,23 +92,24 @@ public class InteractionSystem {
     public static Process ProcessManage(boolean usePriority) {
         boolean isValidInput = false;
         Process process = null;
+        int processNum = 1;
 
         if (usePriority) {
             while (!isValidInput) {
                 try {
-                    Utilities.displayWithDelayNoLine("Enter Process's BurstTime >> ", "white");
+                    Utilities.displayWithDelayNoLine("Enter " + processNum + " Process's BurstTime >> ", "white");
                     int burstTime = scnr.nextInt();
                     if (burstTime <= 0) {
                         throw new IllegalArgumentException("Burst time must be positive!");
                     }
 
-                    Utilities.displayWithDelayNoLine("Enter Process's ArrivalTime >> ", "white");
+                    Utilities.displayWithDelayNoLine("Enter " + processNum + "P rocess's ArrivalTime >> ", "white");
                     int arrivalTime = scnr.nextInt();
                     if (arrivalTime < 0) {
                         throw new IllegalArgumentException("Arrival time cannot be negative!");
                     }
 
-                    Utilities.displayWithDelayNoLine("Enter Process's Priority >> ", "white");
+                    Utilities.displayWithDelayNoLine("Enter " + processNum + " Process's Priority >> ", "white");
                     int priority = scnr.nextInt();
                     if (priority <= 0) {
                         throw new IllegalArgumentException("Priority must be positive!");
@@ -116,6 +117,7 @@ public class InteractionSystem {
 
                     Utilities.displayWithDelay("-----------------------------------------------", "white");
                     process = new Process(burstTime, arrivalTime, priority);
+                    processNum++;
                     isValidInput = true;
                 } catch (InputMismatchException e) {
                     Utilities.displayWithDelay("Input must be a number!", "red");
@@ -127,13 +129,13 @@ public class InteractionSystem {
         } else {
             while (!isValidInput) {
                 try {
-                    Utilities.displayWithDelayNoLine("Enter Process's BurstTime >> ", "white");
+                    Utilities.displayWithDelayNoLine("Enter " + processNum + " Process's BurstTime >> ", "white");
                     int burstTime = scnr.nextInt();
                     if (burstTime <= 0) {
                         throw new IllegalArgumentException("Burst time must be positive!");
                     }
 
-                    Utilities.displayWithDelayNoLine("Enter Process's ArrivalTime >> ", "white");
+                    Utilities.displayWithDelayNoLine("Enter " + processNum + "P rocess's ArrivalTime >> ", "white");
                     int arrivalTime = scnr.nextInt();
                     if (arrivalTime < 0) {
                         throw new IllegalArgumentException("Arrival time cannot be negative!");
@@ -141,6 +143,7 @@ public class InteractionSystem {
 
                     Utilities.displayWithDelay("-----------------------------------------------", "white");
                     process = new Process(burstTime, arrivalTime);
+                    processNum++;
                     isValidInput = true;
                 } catch (InputMismatchException e) {
                     Utilities.displayWithDelay("Input must be a number!", "red");

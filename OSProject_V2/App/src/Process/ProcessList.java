@@ -148,7 +148,6 @@ public class ProcessList {
      * Prints the process list with the process details.
      */
     public void printList(String algorithmType) {
-        sortByArrivalTime();
         String processList = "";
         algorithmType = algorithmType.toLowerCase();
         if (algorithmType.equals("fcfs") || algorithmType.equals("sjf") || algorithmType.equals("rr")) {
