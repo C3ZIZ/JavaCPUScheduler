@@ -26,11 +26,11 @@ public class Process {
      *
      * @param burstTime   The burst time required for the process.
      */
-    public Process(int burstTime) {
+    public Process(int burstTime, int arrivalTime) {
         this.processName = "P" + processID;
         this.burstTime = burstTime;
         this.priority = 0;
-        arrivalTime = 0;
+        this.arrivalTime = arrivalTime;
         waitingTime = 0;
         turnAround = 0;
         remainTime = burstTime;
@@ -46,11 +46,11 @@ public class Process {
      * @param burstTime   The burst time required for the process.
      * @param priority    The priority of the process.
      */
-    public Process(int burstTime, int priority) {
+    public Process(int burstTime, int arrivalTime, int priority) {
         this.processName = "P" + processID;
         this.burstTime = burstTime;
         this.priority = priority;
-        arrivalTime = 0;
+        this.arrivalTime = arrivalTime;
         waitingTime = 0;
         turnAround = 0;
         remainTime = burstTime;

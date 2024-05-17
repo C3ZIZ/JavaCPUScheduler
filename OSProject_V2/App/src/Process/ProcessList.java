@@ -37,7 +37,6 @@ public class ProcessList {
      */
     public void addProcess(Process p) {
         pList.add(p);
-        pList.get(pList.size() - 1).setArrivalTime(size() - 1);
     }
 
 

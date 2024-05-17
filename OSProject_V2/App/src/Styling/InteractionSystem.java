@@ -103,6 +103,12 @@ public class InteractionSystem {
                         throw new IllegalArgumentException("Burst time must be positive!");
                     }
 
+                    Utilities.displayWithDelayNoLine("Enter Process's ArrivalTime >> ", "white");
+                    int arrivalTime = scnr.nextInt();
+                    if (arrivalTime <= 0) {
+                        throw new IllegalArgumentException("Arrival time must be positive!");
+                    }
+
                     Utilities.displayWithDelayNoLine("Enter Process's Priority >> ", "white");
                     int priority = scnr.nextInt();
                     if (priority <= 0) {
@@ -110,7 +116,7 @@ public class InteractionSystem {
                     }
 
                     Utilities.displayWithDelay("-----------------------------------------------", "white");
-                    process = new Process(burstTime, priority);
+                    process = new Process(burstTime, arrivalTime, priority);
                     isValidInput = true;
                 } catch (InputMismatchException e) {
                     Utilities.displayWithDelay("Input must be a number!", "red");
@@ -127,8 +133,15 @@ public class InteractionSystem {
                     if (burstTime <= 0) {
                         throw new IllegalArgumentException("Burst time must be positive!");
                     }
+
+                    Utilities.displayWithDelayNoLine("Enter Process's ArrivalTime >> ", "white");
+                    int arrivalTime = scnr.nextInt();
+                    if (arrivalTime <= 0) {
+                        throw new IllegalArgumentException("Arrival time must be positive!");
+                    }
+
                     Utilities.displayWithDelay("-----------------------------------------------", "white");
-                    process = new Process(burstTime);
+                    process = new Process(burstTime, arrivalTime);
                     isValidInput = true;
                 } catch (InputMismatchException e) {
                     Utilities.displayWithDelay("Input must be a number!", "red");
