@@ -16,6 +16,7 @@ public class InteractionSystem {
         Utilities.displayWithDelay("Welcome to CPU scheduler simulator\n", "white");
         int choice;
         char usePriority;
+        int pNum = 1; // I will use it to print process order when taking input - Aziz
         while (true) {
             try {
                 InteractionSystem.ProcessManageMenu();
@@ -37,11 +38,13 @@ public class InteractionSystem {
                             break;
                         } else if (usePriority == 'y') {
                             for (int i = 1; i <= processNum; i++) {
-                                pList.addProcess(InteractionSystem.ProcessManage(true));
+                                pList.addProcess(InteractionSystem.ProcessManage(true, pNum));
+                                pNum++;
                             }
                         } else {
                             for (int i = 1; i <= processNum; i++) {
-                                pList.addProcess(InteractionSystem.ProcessManage(false));
+                                pList.addProcess(InteractionSystem.ProcessManage(false, pNum));
+                                pNum++;
                             }
                         }
                         break;
@@ -89,35 +92,33 @@ public class InteractionSystem {
         Utilities.displayWithDelayNoLine("Your input >> ", "green");
     }
 
-    public static Process ProcessManage(boolean usePriority) {
+    public static Process ProcessManage(boolean usePriority, int pNum) {
         boolean isValidInput = false;
         Process process = null;
-        int processNum = 1;
 
         if (usePriority) {
             while (!isValidInput) {
                 try {
-                    Utilities.displayWithDelayNoLine("Enter " + processNum + " Process's BurstTime >> ", "white");
+                    Utilities.displayWithDelayNoLine("Enter Process " + pNum + " BurstTime >> ", "white");
                     int burstTime = scnr.nextInt();
                     if (burstTime <= 0) {
                         throw new IllegalArgumentException("Burst time must be positive!");
                     }
 
-                    Utilities.displayWithDelayNoLine("Enter " + processNum + "P rocess's ArrivalTime >> ", "white");
+                    Utilities.displayWithDelayNoLine("Enter Process " + pNum + " ArrivalTime >> ", "white");
                     int arrivalTime = scnr.nextInt();
                     if (arrivalTime < 0) {
                         throw new IllegalArgumentException("Arrival time cannot be negative!");
                     }
 
-                    Utilities.displayWithDelayNoLine("Enter " + processNum + " Process's Priority >> ", "white");
+                    Utilities.displayWithDelayNoLine("Enter Process " + pNum + " priority >> ", "white");
                     int priority = scnr.nextInt();
                     if (priority <= 0) {
                         throw new IllegalArgumentException("Priority must be positive!");
                     }
-
+                    pNum++;
                     Utilities.displayWithDelay("-----------------------------------------------", "white");
                     process = new Process(burstTime, arrivalTime, priority);
-                    processNum++;
                     isValidInput = true;
                 } catch (InputMismatchException e) {
                     Utilities.displayWithDelay("Input must be a number!", "red");
@@ -129,13 +130,13 @@ public class InteractionSystem {
         } else {
             while (!isValidInput) {
                 try {
-                    Utilities.displayWithDelayNoLine("Enter " + processNum + " Process's BurstTime >> ", "white");
+                    Utilities.displayWithDelayNoLine("Enter Process " + pNum + " BurstTime >> ", "white");
                     int burstTime = scnr.nextInt();
                     if (burstTime <= 0) {
                         throw new IllegalArgumentException("Burst time must be positive!");
                     }
 
-                    Utilities.displayWithDelayNoLine("Enter " + processNum + "P rocess's ArrivalTime >> ", "white");
+                    Utilities.displayWithDelayNoLine("Enter Process " + pNum + " ArrivalTime >> ", "white");
                     int arrivalTime = scnr.nextInt();
                     if (arrivalTime < 0) {
                         throw new IllegalArgumentException("Arrival time cannot be negative!");
@@ -143,11 +144,11 @@ public class InteractionSystem {
 
                     Utilities.displayWithDelay("-----------------------------------------------", "white");
                     process = new Process(burstTime, arrivalTime);
-                    processNum++;
+                    pNum++;
                     isValidInput = true;
                 } catch (InputMismatchException e) {
                     Utilities.displayWithDelay("Input must be a number!", "red");
-                    scnr.next(); // Clear the incorrect input
+                    scnr.next(); // Clear the invalid input
                 } catch (IllegalArgumentException e) {
                     Utilities.displayWithDelay(e.getMessage(), "red");
                 }
