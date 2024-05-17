@@ -190,11 +190,12 @@ public class ProcessList {
                 processList += "\n";
             }
         } else if (algorithmType.equals("show-content")) {
-            processList += "ProcessName\tBurstTime\tArrivalTime\n";
+            processList += "ProcessName\tBurstTime\tArrivalTime\tPriority (if used)\n";
             for (int i = 0; i < pList.size(); i++) {
                 processList += pList.get(i).getProcessName() + "\t\t";
                 processList += pList.get(i).getBurstTime() + "\t\t";
                 processList += pList.get(i).getArrivalTime() + "\t\t";
+                processList += pList.get(i).getPriority() + "\t\t";
                 processList += "\n";
             }
         } else {
