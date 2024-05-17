@@ -129,7 +129,7 @@ public class InteractionSystem {
                 try {
                     Utilities.displayWithDelayNoLine("Enter Process's BurstTime >> ", "white");
                     int burstTime = scnr.nextInt();
-                    if (burstTime < 0) {
+                    if (burstTime <= 0) {
                         throw new IllegalArgumentException("Burst time must be positive!");
                     }
 
