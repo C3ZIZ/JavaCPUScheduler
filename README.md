@@ -7,6 +7,7 @@ This project implements various CPU scheduling algorithms, commonly used in oper
 - Shortest Job First (SJF) (Preemptive and Non-Preemptive)
 
 The project also contains utility classes to manage processes and interact with users, made for CS2342 [Course info at UQU](https://uqu.edu.sa/App/Degrees/740/34694).
+Author: Abdulaziz Hafiz, CS student at UQU, [LinkedIn](https://www.linkedin.com/in/c3ziz/).
 
 ## Table of Contents
 1. [Overview](#overview)
