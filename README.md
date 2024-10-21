@@ -126,17 +126,20 @@ Screenshots showing various parts of the program:
 
 1. **Main Menu:**
    _Main menu interface where users can select the scheduling algorithm._
+
    ![Main Menu](https://raw.githubusercontent.com/C3ZIZ/JavaCPUScheduler/refs/heads/main/Pictures/c1.png?token=GHSAT0AAAAAACZIVYOGA652BURELPSYOZ7AZYWEAGQ)
    
    
 
 2. **Process List Overview:**
    _Display of processes and their attributes (ID, burst time, arrival time, priority) before scheduling._
+
    ![Process List Overview](https://raw.githubusercontent.com/C3ZIZ/JavaCPUScheduler/refs/heads/main/Pictures/c2.png?token=GHSAT0AAAAAACZIVYOHGIZM6AZ6UVZ2TSU4ZYWEBSQ)
    
 
 3. **Scheduling Example (FCFS):**
     _Example of First-Come-First-Serve (FCFS) scheduling algorithm in action._
+   
    ![Scheduling Example (FCFS)](https://raw.githubusercontent.com/C3ZIZ/JavaCPUScheduler/refs/heads/main/Pictures/c3.png?token=GHSAT0AAAAAACZIVYOGSUNLDTPOBQSMAMCYZYWEBUQ)
    
 
