@@ -23,7 +23,7 @@ The project also contains utility classes to manage processes and interact with 
     - [Driver](#driver)
 4. [How to Run](#how-to-run)
 5. [Example Output](#example-output)
-6. [In-code pictures](#In-code pictures)
+6. [In-code pictures](#In-code-pictures)
 
 ---
 
@@ -117,7 +117,7 @@ Process 4 executed for 4 units ...
 Average Waiting Time: 5.75 Average Turnaround Time: 11.5
 ```
 
-## In-code Pictures
+## In-code-Pictures
 
 Screenshots showing various parts of the program:
 
