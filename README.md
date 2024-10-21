@@ -36,7 +36,7 @@ This project simulates various CPU scheduling algorithms to help visualize and u
 
 ---
 
-## key features
+## Key Features
 
 - Multiple Scheduling Algorithms: Implements FCFS, Priority Scheduling, Round Robin, and both Preemptive and Non-Preemptive Shortest Job First (SJF) algorithms.
 - User Interaction System: Interactive menus for easy selection of algorithms and input handling.
