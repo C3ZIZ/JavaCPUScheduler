@@ -114,7 +114,7 @@ Average Waiting Time: 5.75 Average Turnaround Time: 11.5
 
 ## In-code pictures
 ![Main menu](https://raw.githubusercontent.com/C3ZIZ/JavaCPUScheduler/refs/heads/main/Pictures/c1.png?token=GHSAT0AAAAAACZIVYOGA652BURELPSYOZ7AZYWEAGQ)
-![Print processes](images/example.png(https://github.com/C3ZIZ/JavaCPUScheduler/blob/main/Pictures/c2.png))
+![Print processes](images/example.png(https://github.com/C3ZIZ/JavaCPUScheduler/blob/main/Pictures/c2.png)
 ![Scheduling example (FCFS)]((https://github.com/C3ZIZ/JavaCPUScheduler/blob/main/Pictures/c3.png))
 
 
