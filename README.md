@@ -117,9 +117,18 @@ Process 4 executed for 4 units ...
 Average Waiting Time: 5.75 Average Turnaround Time: 11.5
 ```
 
-## In-code pictures
-![Main menu](https://raw.githubusercontent.com/C3ZIZ/JavaCPUScheduler/refs/heads/main/Pictures/c1.png?token=GHSAT0AAAAAACZIVYOGA652BURELPSYOZ7AZYWEAGQ)
-![Print processes](https://raw.githubusercontent.com/C3ZIZ/JavaCPUScheduler/refs/heads/main/Pictures/c2.png?token=GHSAT0AAAAAACZIVYOHGIZM6AZ6UVZ2TSU4ZYWEBSQ)
-![Scheduling example (FCFS)](https://raw.githubusercontent.com/C3ZIZ/JavaCPUScheduler/refs/heads/main/Pictures/c3.png?token=GHSAT0AAAAAACZIVYOGSUNLDTPOBQSMAMCYZYWEBUQ)
+## In-code Pictures
 
+Screenshots showing various parts of the program:
 
+1. **Main Menu:**
+   ![Main Menu](https://raw.githubusercontent.com/C3ZIZ/JavaCPUScheduler/refs/heads/main/Pictures/c1.png?token=GHSAT0AAAAAACZIVYOGA652BURELPSYOZ7AZYWEAGQ)
+   _Main menu interface where users can select the scheduling algorithm._
+
+2. **Process List Overview:**
+   ![Process List Overview](https://raw.githubusercontent.com/C3ZIZ/JavaCPUScheduler/refs/heads/main/Pictures/c2.png?token=GHSAT0AAAAAACZIVYOHGIZM6AZ6UVZ2TSU4ZYWEBSQ)
+   _Display of processes and their attributes (ID, burst time, arrival time, priority) before scheduling._
+
+3. **Scheduling Example (FCFS):**
+   ![Scheduling Example (FCFS)](https://raw.githubusercontent.com/C3ZIZ/JavaCPUScheduler/refs/heads/main/Pictures/c3.png?token=GHSAT0AAAAAACZIVYOGSUNLDTPOBQSMAMCYZYWEBUQ)
+   _Example of First-Come-First-Serve (FCFS) scheduling algorithm in action._
