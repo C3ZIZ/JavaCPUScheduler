@@ -177,7 +177,7 @@ Common problems with solutions
 
 ---
 
-##Advanced Usage
+## Advanced Usage
 
 You can create scripts to define and run multiple scheduling algorithms in sequence and add them manually.
 
