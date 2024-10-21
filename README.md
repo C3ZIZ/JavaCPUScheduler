@@ -12,26 +12,36 @@ Author: Abdulaziz Hafiz, CS student at UQU, [LinkedIn](https://www.linkedin.com/
 
 ## Table of Contents
 1. [Overview](#overview)
-2. [Algorithms Implemented](#algorithms-implemented)
+2. [Key Features](#key-features)
+3. [Algorithms Implemented](#algorithms-implemented)
     - [First-Come-First-Serve (FCFS)](#first-come-first-serve-fcfs)
     - [Priority Scheduling](#priority-scheduling)
     - [Round Robin (RR)](#round-robin-rr)
     - [Shortest Job First (SJF)](#shortest-job-first-sjf)
-3. [Classes](#classes)
+4. [Classes](#classes)
     - [Process](#process)
     - [ProcessList](#processlist)
     - [Utilities](#utilities)
     - [InteractionSystem](#InteractionSystem)
     - [Driver](#driver)
-4. [How to Run](#how-to-run)
-5. [Example Output](#example-output)
-6. [In-code pictures](#In-code-pictures)
+5. [How to Run](#how-to-run)
+6. [Example Output](#example-output)
+7. [In-code pictures](#In-code-pictures)
 
 ---
 
 ## Overview
 
 This project simulates various CPU scheduling algorithms to help visualize and understand the different ways processes are handled in an operating system. Each algorithm has its own strengths and weaknesses, and this project provides a way to compare their performance through simulations.
+
+---
+
+## key-features
+
+- Multiple Scheduling Algorithms: Implements FCFS, Priority Scheduling, Round Robin, and both Preemptive and Non-Preemptive Shortest Job First (SJF) algorithms.
+- User Interaction System: Interactive menus for easy selection of algorithms and input handling.
+- Process Management: Comprehensive ProcessList class to manage and schedule multiple processes.
+- Utility Functions: Includes helper functions for enhanced user interface, such as colored terminal outputs.
 
 ---
 
