@@ -22,8 +22,6 @@ The project also contains utility classes to manage processes and interact with 
     - [Driver](#driver)
 4. [How to Run](#how-to-run)
 5. [Example Output](#example-output)
-6. [Contributing](#contributing)
-7. [License](#license)
 
 ---
 
