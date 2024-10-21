@@ -22,6 +22,7 @@ The project also contains utility classes to manage processes and interact with 
     - [Driver](#driver)
 4. [How to Run](#how-to-run)
 5. [Example Output](#example-output)
+6. [In-code pictures](#In-code pictures)
 
 ---
 
@@ -95,9 +96,20 @@ java Driver
 ## Example Output
 ```
 Example output for the Round Robin (RR) algorithm with 4 processes and a time quantum of 4:
-Enter number of processes: 4 Process 1: Burst Time = 10, Arrival Time = 0 Process 2: Burst Time = 5, Arrival Time = 2 Process 3: Burst Time = 8, Arrival Time = 3 Process 4: Burst Time = 4, Arrival Time = 5 Time Quantum = 4
+Enter number of processes: 4
+Process 1: Burst Time = 10, Arrival Time = 0
+Process 2: Burst Time = 5, Arrival Time = 2
+Process 3: Burst Time = 8, Arrival Time = 3
+Process 4: Burst Time = 4, Arrival Time = 5
+Time Quantum = 4
 
-Executing Round Robin Scheduling... Process 1 executed for 4 units Process 2 executed for 4 units Process 3 executed for 4 units Process 4 executed for 4 units ...
+Executing Round Robin Scheduling...
+Process 1 executed for 4 units
+Process 2 executed for 4 units
+Process 3 executed for 4 units
+Process 4 executed for 4 units ...
 
 Average Waiting Time: 5.75 Average Turnaround Time: 11.5
 ```
+
+##In-code pictures
