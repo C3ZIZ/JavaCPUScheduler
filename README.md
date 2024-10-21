@@ -91,6 +91,8 @@ The `Driver` class is the main entry point of the project. It handles the intera
 2. Compile the Java files using a Java compiler (`javac`).
 3. Run the main `Driver.java` class to interact with the system and select the desired scheduling algorithm.
 
+---
+
 ### Example Commands:
 
 ```bash
@@ -116,6 +118,7 @@ Process 4 executed for 4 units ...
 
 Average Waiting Time: 5.75 Average Turnaround Time: 11.5
 ```
+---
 
 ## In-code-Pictures
 
@@ -135,3 +138,5 @@ Screenshots showing various parts of the program:
    ![Scheduling Example (FCFS)](https://raw.githubusercontent.com/C3ZIZ/JavaCPUScheduler/refs/heads/main/Pictures/c3.png?token=GHSAT0AAAAAACZIVYOGSUNLDTPOBQSMAMCYZYWEBUQ)
    
    _Example of First-Come-First-Serve (FCFS) scheduling algorithm in action._
+
+---
