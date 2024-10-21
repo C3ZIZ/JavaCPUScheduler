@@ -27,6 +27,8 @@ Author: Abdulaziz Hafiz, CS student at UQU, [LinkedIn](https://www.linkedin.com/
 5. [How to Run](#how-to-run)
 6. [Example Output](#example-output)
 7. [In-code pictures](#In-code-pictures)
+8. [Troubleshooting](#troubleshooting)
+9. [Advanced Usage](#advanced-usage)
 
 ---
 
@@ -156,3 +158,52 @@ Screenshots showing various parts of the program:
    
 
 ---
+
+## Troubleshooting
+
+Common problems with solutions
+
+- Code not running:
+-- Cause: an error in IDE (especially in VSCode).
+-- Solution: make sure you have [Java extension pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack) for VSCode installed.
+
+- Scheduling results not displayed
+-- Cause: Process list may be empty or incorrectly initialized.
+-- Solution: Ensure that the processes are added to the list before running any scheduling algorithm by using option 2 (display processes).
+
+- Infinite loop during process execution
+-- Cause: Scheduling algorithm never terminates due to improper handling of process completion or incorrect exit conditions.
+-- Solution: Ensure that processes are being properly marked as "completed" once their burst time reaches zero. Ensure the Burst and arrival times are non-negative while adding processes.
+
+---
+
+##Advanced Usage
+
+You can create scripts to define and run multiple scheduling algorithms in sequence and add them manually.
+
+```java
+// Script to automate scheduling tasks
+
+public class Script {
+    public static void main(String[] args) {
+        // Create process list
+        ProcessList processList = new ProcessList();
+        processList.addProcess(new Process(1, 5, 0, 2));
+        processList.addProcess(new Process(2, 10, 1, 1));
+
+        // Run FCFS
+        FCFS fcfs = new FCFS(processList);
+        fcfs.execute();
+        
+        // Run Round Robin
+        RoundRobin rr = new RoundRobin(processList, 4);
+        rr.execute();
+    }
+}
+```
+### Integrations
+| Application | Description                                             | Link                                |
+|------------------|---------------------------------------------------------|-------------------------------------|
+| **CPU-Scheduling**       | Basic site scheduler on Github by Aryan Darji. | [Github]([https://grafana.com](https://github.com/Aryan-Darji-07/CPU-Scheduling))      |
+| **Process Scheduling Solver**    | Open-source online scheduler providing vairous algorithms showing most relevant info for each process. | [boonsuen]([https://prometheus.io](https://process-scheduling-solver.boonsuen.com/)) |
+| **Hirusha Cooray Scheduler**       | Simple open-source scheduler by Hirusha Cooray. | [Hirusha Cooray](https://www.jenkins.io)   |
