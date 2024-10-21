@@ -19,6 +19,7 @@ The project also contains utility classes to manage processes and interact with 
     - [Process](#process)
     - [ProcessList](#processlist)
     - [Utilities](#utilities)
+    - [InteractionSystem](#InteractionSystem)
     - [Driver](#driver)
 4. [How to Run](#how-to-run)
 5. [Example Output](#example-output)
@@ -72,11 +73,15 @@ The `ProcessList` class manages the list of processes and provides methods for s
 
 ### Utilities
 
-The `Utilities` class contains helper functions that make the implementation easier, such as random process generation or calculation of performance metrics like average waiting time.
+The `Utilities` class contains helper functions that make the code more elegant such as terminal coloring with simple animation.
+
+### InteractionSystem
+
+The `InteractionSystem` class serves as the core interactive component of a CPU scheduler simulator containing the initialization, menus, algorithms invoking, and error handling.
 
 ### Driver
 
-The `Driver` class is the main entry point of the project. It handles the interaction between the user and the scheduling algorithms, allowing the user to select the scheduling algorithm and view the results.
+The `Driver` class is the main entry point of the project. It handles the interaction between the user and the scheduling algorithms.
 
 ---
 
