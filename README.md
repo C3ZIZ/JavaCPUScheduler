@@ -112,4 +112,9 @@ Process 4 executed for 4 units ...
 Average Waiting Time: 5.75 Average Turnaround Time: 11.5
 ```
 
-##In-code pictures
+## In-code pictures
+![Main menu]([images/example.png](https://github.com/C3ZIZ/JavaCPUScheduler/blob/main/Pictures/c1.png))
+![Print processes]([images/example.png](https://github.com/C3ZIZ/JavaCPUScheduler/blob/main/Pictures/c2.png))
+![Scheduling example (FCFS)]([images/example.png](https://github.com/C3ZIZ/JavaCPUScheduler/blob/main/Pictures/c3.png))
+
+
