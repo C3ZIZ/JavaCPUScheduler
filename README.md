@@ -39,27 +39,19 @@ This project simulates various CPU scheduling algorithms to help visualize and u
 
 The **First-Come-First-Serve (FCFS)** algorithm schedules processes based on their arrival time. It is simple but can lead to long waiting times for shorter processes if a longer process is at the front.
 
-- Source: `FCFS.java`
-
 ### Priority Scheduling
 
 **Priority Scheduling** is based on the priority level assigned to each process. The process with the highest priority is executed first. If two processes have the same priority, they are scheduled in the order they arrive.
 
-- Source: `Priority.java`
-
 ### Round Robin (RR)
 
 The **Round Robin (RR)** algorithm assigns a fixed time quantum to each process and cycles through the processes. It ensures fairness by allowing each process to have CPU time but may lead to context-switch overhead if the time quantum is too small.
-
-- Source: `RoundRobin.java`
 
 ### Shortest Job First (SJF)
 
 The **Shortest Job First (SJF)** algorithm schedules the process with the shortest burst time first. It can be:
 - **Preemptive**: The running process can be interrupted if a new process arrives with a shorter burst time.
 - **Non-Preemptive**: Once a process starts, it runs to completion, regardless of new arrivals.
-
-- Sources: `SJFPreemptive.java`, `SJFNonPreemptive.java`
 
 ---
 
@@ -75,25 +67,17 @@ The `Process` class is a representation of a process, containing attributes such
 
 It handles individual process properties for scheduling algorithms.
 
-- Source: `Process.java`
-
 ### ProcessList
 
 The `ProcessList` class manages the list of processes and provides methods for sorting, scheduling, and retrieving processes based on different criteria (such as arrival time or burst time).
-
-- Source: `ProcessList.java`
 
 ### Utilities
 
 The `Utilities` class contains helper functions that make the implementation easier, such as random process generation or calculation of performance metrics like average waiting time.
 
-- Source: `Utilities.java`
-
 ### Driver
 
 The `Driver` class is the main entry point of the project. It handles the interaction between the user and the scheduling algorithms, allowing the user to select the scheduling algorithm and view the results.
-
-- Source: `Driver.java`
 
 ---
 
