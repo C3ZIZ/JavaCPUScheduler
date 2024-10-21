@@ -204,6 +204,6 @@ public class Script {
 ### Integrations
 | Application | Description                                             | Link                                |
 |------------------|---------------------------------------------------------|-------------------------------------|
-| **CPU-Scheduling**       | Basic site scheduler on Github by Aryan Darji. | [Github]([https://grafana.com](https://github.com/Aryan-Darji-07/CPU-Scheduling))      |
-| **Process Scheduling Solver**    | Open-source online scheduler providing vairous algorithms showing most relevant info for each process. | [boonsuen]([https://prometheus.io](https://process-scheduling-solver.boonsuen.com/)) |
+| **CPU-Scheduling**       | Basic site scheduler on Github by Aryan Darji. | [Github]([https://grafana.com](https://github.com/Aryan-Darji-07/CPU-Scheduling)      |
+| **Process Scheduling Solver**    | Open-source online scheduler providing vairous algorithms showing most relevant info for each process. | [boonsuen]([https://prometheus.io](https://process-scheduling-solver.boonsuen.com/) |
 | **Hirusha Cooray Scheduler**       | Simple open-source scheduler by Hirusha Cooray. | [Hirusha Cooray](https://www.jenkins.io)   |
