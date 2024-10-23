@@ -12,8 +12,8 @@ Author: Abdulaziz Hafiz, CS student at UQU, [LinkedIn](https://www.linkedin.com/
 
 ## Table of Contents
 1. [Overview](#overview)
-2. [Key Features](#Key Features ⭐)
-3. [Algorithms Implemented](#Algorithms Implemented 💻)
+2. [Key Features](#Key-Features-⭐)
+3. [Algorithms Implemented](#Algorithms-Implemented-💻)
     - [First-Come-First-Serve (FCFS)](#first-come-first-serve-fcfs)
     - [Priority Scheduling](#priority-scheduling)
     - [Round Robin (RR)](#round-robin-rr)
@@ -24,11 +24,11 @@ Author: Abdulaziz Hafiz, CS student at UQU, [LinkedIn](https://www.linkedin.com/
     - [Utilities](#utilities)
     - [InteractionSystem](#InteractionSystem)
     - [Driver](#driver)
-5. [How to Run](#How to Run ❓)
-6. [Example Output](#Example Output 📑)
-7. [In-code pictures](#In-code-Pictures 📷)
-8. [Troubleshooting](#Troubleshooting ⚙)
-9. [Advanced Usage](#Advanced Usage 👨‍🏫)
+5. [How to Run](#How-to-Run-❓)
+6. [Example Output](#Example-Output-📑)
+7. [In-code pictures](#In-code-Pictures-📷)
+8. [Troubleshooting](#Troubleshooting-⚙)
+9. [Advanced Usage](#Advanced-Usage-👨‍🏫)
 
 ---
 
@@ -134,7 +134,7 @@ Average Waiting Time: 5.75 Average Turnaround Time: 11.5
 ```
 ---
 
-## In-code-Pictures 📷
+## In code Pictures 📷
 
 Screenshots showing various parts of the program:
 
