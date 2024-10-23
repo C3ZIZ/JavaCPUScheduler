@@ -12,8 +12,8 @@ Author: Abdulaziz Hafiz, CS student at UQU, [LinkedIn](https://www.linkedin.com/
 
 ## Table of Contents
 1. [Overview](#overview)
-2. [Key Features ⭐](#key-features-⭐)
-3. [Algorithms Implemented 💻](#algorithms-implemented-💻)
+2. [Key Features ⭐](#key-features)
+3. [Algorithms Implemented 💻](#algorithms-implemented)
     - [First-Come-First-Serve (FCFS)](#first-come-first-serve-fcfs)
     - [Priority Scheduling](#priority-scheduling)
     - [Round Robin (RR)](#round-robin-rr)
@@ -24,11 +24,11 @@ Author: Abdulaziz Hafiz, CS student at UQU, [LinkedIn](https://www.linkedin.com/
     - [Utilities](#utilities)
     - [InteractionSystem](#interactionsystem)
     - [Driver](#driver)
-5. [How to Run ❓](#how-to-run-❓)
-6. [Example Output 📑](#example-output-📑)
-7. [In-code Pictures 📷](#in-code-pictures-📷)
-8. [Troubleshooting ⚙](#troubleshooting-⚙)
-9. [Advanced Usage 👨‍🏫](#advanced-usage-👨‍🏫)
+5. [How to Run ❓](#how-to-run)
+6. [Example Output 📑](#example-output)
+7. [In-code Pictures 📷](#in-code-pictures)
+8. [Troubleshooting ⚙](#troubleshooting)
+9. [Advanced Usage 👨‍🏫](#advanced-usage)
 
 
 ---
