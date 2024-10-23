@@ -32,13 +32,13 @@ Author: Abdulaziz Hafiz, CS student at UQU, [LinkedIn](https://www.linkedin.com/
 
 ---
 
-## Overview
+## Overview 
 
 This project simulates various CPU scheduling algorithms to help visualize and understand the different ways processes are handled in an operating system. Each algorithm has its own strengths and weaknesses, and this project provides a way to compare their performance through simulations.
 
 ---
 
-## Key Features
+## Key Features ⭐
 
 - Multiple Scheduling Algorithms: Implements FCFS, Priority Scheduling, Round Robin, and both Preemptive and Non-Preemptive Shortest Job First (SJF) algorithms.
 - User Interaction System: Interactive menus for easy selection of algorithms and input handling.
@@ -47,7 +47,7 @@ This project simulates various CPU scheduling algorithms to help visualize and u
 
 ---
 
-## Algorithms Implemented
+## Algorithms Implemented 💻
 
 ### First-Come-First-Serve (FCFS)
 
@@ -99,7 +99,7 @@ The `Driver` class is the main entry point of the project. It handles the intera
 
 ---
 
-## How to Run
+## How to Run ❓
 
 1. Download or clone the repository.
 2. Compile the Java files using a Java compiler (`javac`).
@@ -107,14 +107,14 @@ The `Driver` class is the main entry point of the project. It handles the intera
 
 ---
 
-### Example Commands:
+### Example Commands: 
 
 ```bash
 javac Driver.java
 java Driver
 ```
 
-## Example Output
+## Example Output 📑
 ```
 Example output for the Round Robin (RR) algorithm with 4 processes and a time quantum of 4:
 Enter number of processes: 4
@@ -134,7 +134,7 @@ Average Waiting Time: 5.75 Average Turnaround Time: 11.5
 ```
 ---
 
-## In-code-Pictures
+## In-code-Pictures 📷
 
 Screenshots showing various parts of the program:
 
@@ -159,7 +159,7 @@ Screenshots showing various parts of the program:
 
 ---
 
-## Troubleshooting
+## Troubleshooting ⚙
 
 Common problems with solutions
 
@@ -177,7 +177,7 @@ Common problems with solutions
 
 ---
 
-## Advanced Usage
+## Advanced Usage 👨‍🏫
 
 You can create scripts to define and run multiple scheduling algorithms in sequence and add them manually.
 
